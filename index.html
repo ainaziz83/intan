@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<!--<link href="css/jquery.mobile.min.css" rel="stylesheet" type="text/css"> ni dah tak guna selepas guna theme. tarik dari folder css -->
+<link rel="stylesheet" href="css/button.min.css" />
+<link rel="stylesheet" href="css/jquery.mobile.icons.min.css" />
+<link rel="stylesheet" href="css/jquery.mobile.structure.min.css" /> 
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.mobile.min.js"></script> <!-- jquery.mobile perlu berada di bawah jquery.min sbb nak load dr .min -->
+
+
+
+</head>
+
+<body>
+<!--Step 1 aka Page 1 -->
+<div data-role="page" id="page1">
+  
+  <!--content -->
+  <div role="main" class="ui-content" style="text-align:center;"> <!-- 1.4 ke atas dah tukar di content-->
+	<h2 style="text-align:center;">Selamat Datang</h2>
+	<img src="gambar/jp.jpg" width="290"/>	
+	<h3 style="text-align:center;">WEB MOBILE RASMI JP</h3>
+	<p style="font-family:arial;color:red;font-size:12px;text-align:center;">Blok C6, Kompleks C, <br/>Pusat Pentadbiran Kerajaan Persekutuan, 62514, PUTRAJAYA</p>
+	<!-- <a href="#page2" class="ui-btn">Masuk</a>-->  <!--button panjang-->
+	<a href="#page2" class="ui-btn ui-btn-inline">Info</a> <!-- ui-btn-inline di tambah menjadikan button menjadi pendek-->
+	<a href="#page3" class="ui-btn ui-btn-inline">Fungsi</a>
+	<a href="#page4" class="ui-btn ui-btn-inline">Direktori</a>
+  </div>
+
+</div>
+
+<!--Step 2 aka Page 2-->
+<div data-role="page" id="page2">
+	<!-- panel -->
+	<div data-role="panel" id="panel1" data-display="overlay">
+	<h4>Senarai mukasurat ada di bawah</h4>
+		<ul data-role="listview">
+			<!-- <li><a href="#page2">Maklumat</a></li> ni jika nak link dgn page yg ada dalam list--> 
+			<li><a href="luar1.html" data-transition="turn">Isi 1</a></li>
+			<li><a href="luar2.html" data-transition="fade">Isi 2</a></li>
+			<li><a href="luar3.html" data-transition="flip">Isi 3</a></li>
+		</ul>
+	</div>
+	<!--header -->
+  <div data-role="header" data-position="fixed" data-add-back-btn="true" data-add-back-text="Kembali"> <!-- data-position="fixed" berfungsi header akan hilang bila scroll down if klik pada screen..if not header akan papar-->
+	<a href="#panel1" data-icon="bars" data-iconpos="notext">Menu</a>
+	<h3>Maklumat</h3>	
+  </div>
+  
+  <!--content -->
+  <div role="main" class="ui-content"> <!-- 1.4 ke atas dah tukar di content-->
+
+	<a href="#pop3" class="ui-btn ui-btn-inline" data-rel="popup" data-transition="pop">Peranan</a><!--ini untuk pop up -->
+	<div data-role="popup" id="pop3"> <!--div untuk pop up -->
+	<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-icon-delete ui-btn-icon-notext ui-btn-right">X</a> <!--ini untuk delete button -->
+	<h3>Peranan</h3>
+		<p>Sebagai agensi utama dalam bidang perangkaan ke arah sistem maklumat yang bermutu, berorientasikan pengguna dan bertepatan masa, 
+		Sebagai agensi utama dalam bidang perangkaan ke arah sistem maklumat yang bermutu, berorientasikan pengguna dan bertepatan masa, 
+		untuk pembentukan dasar perancangan pembangunan dan pentadbiran negara.untuk pembentukan dasar perancangan pembangunan dan pentadbiran negara.</p>
+	</div>	
+
+  <h3>Latar Belakang</h3>
+	<p style="font-family:arial;color:brown;font-size:14px;text-align:justify;">Jabatan Perangkaan Malaysia ditubuhkan pada tahun 1949 di bawah peruntukan 
+	Ordinan Statistik 1949 dan dikenali sebagai Biro Statistik. Perangkaan yang dihasilkan pada masa itu terhad hanya kepada data perdagangan luar negeri dan pertanian ladang.
+Pada tahun 1965, Biro Statistik telah bertukar nama kepada Jabatan Perangkaan Malaysia dan beroperasi di bawah peruntukan Akta Perangkaan 1965. 
+Fungsi dan peranan Jabatan seterusnya telah berkembang di mana data/maklumat yang dikumpul semakin meluas merangkumi bidang ekonomi dan juga sosial.
+Jabatan Perangkaan Malaysia merupakan agensi utama kerajaan di bawah Jabatan Perdana Menteri yang diamanah dan dipertanggungjawab untuk memungut, 
+mentafsir serta menyebar perangkaan yang bertepatan masa dan terkini untuk memantau prestasi ekonomi dan juga pembangunan sosial negara.
+Jabatan Perangkaan Malaysia yang beribu pejabat di Pusat Pentadbiran Kerajaan Persekutuan Putrajaya juga mempunyai pejabat di setiap negeri. 
+Bagi memantapkan lagi kerja-kerja pengumpulan data oleh Jabatan Perangkaan Negeri, Pejabat-pejabat Operasi di beberapa buah negeri telah diwujudkan.</p>
+	
+	<a href="#page3" class="ui-btn" data-transition="flip">Fungsi</a>
+  </div>
+  
+  <!--footer -->
+  <div data-role="footer" data-position="fixed">
+    <div data-role="navbar">
+        <ul>
+            <li><a href="#" data-icon="grid" class="ui-btn-active ui-state-persist">Maklumat</a></li>
+            <li><a href="#page3" data-icon="star">Fungsi</a></li>
+            <li><a href="#page4" data-icon="gear">Direktori</a></li>
+        </ul>
+    </div>
+  </div>
+
+</div>
+
+
+<!--Step 3 aka Page 3-->
+<div data-role="page" id="page3">
+	<!--header -->
+  <div data-role="header" data-position="fixed" data-add-back-btn="true" data-add-back-text="Kembali"> <!-- data-position="fixed" berfungsi header akan hilang bila scroll down if klik pada screen..if not header akan papar-->
+	<h3>Fungsi</h3>	
+  </div>
+  
+  <!--content -->
+  <div role="main" class="ui-content"> <!-- 1.4 ke atas dah tukar di content-->
+	<h3>Fungsi Jabatan</h3>
+	<p>Di bawah "Statistics Act 1965 (Revised - 1989)", fungsi utama Jabatan Perangkaan Malaysia ialah :</p>
+	
+		<!--<ul data-role="listview" data-insert="true">  menggunakan list <ul> dan menggantikan <ol>-->
+		<div data-role="collapsible-set">
+			<div data-role="collapsible" data-collapsed="false"><!--terus papar ayat yg pnjang tp ada button minimize -->
+				<h4>mengumpul dan mentafsirkan</h4>
+				<p> perangkaan bagi tujuan pembentukan atau pelaksanaan dasar-dasar kerajaan dalam apa juga bidang yang diperlukan 
+				oleh kerajaan atau bagi memenuhi keperluan-keperluan perdagangan, perniagaan, perindustrian, pertanian atau lain-lain</p>
+			</div>
+		</div>
+		<div data-role="collapsible"><!--tujuan untuk sorok ayat yang panjang -->
+			<h4>menyebar perangkaan</h4>
+			<p> yang telah dikumpul atau tafsiran yang dibuat atas perangkaan yang dikumpul itu, bukan sahaja kepada agensi-agensi kerajaan, 
+			tetapi juga kepada pihak-pihak berkuasa atau orang-orang yang mana maklumat itu berguna untuk mereka</p>
+		</div>
+		
+	<!--ini untuk pop up dialog -->
+	<a href="#pop1" class="ui-btn ui-btn-inline" data-rel="popup" data-transition="pop">Visi</a>
+	<div data-role="popup" id="pop1" data-dismissible="false" style="max-width:400px;"> <!--div untuk pop up -->
+		<div data-role="header">
+			<h3>Visi</h3>
+		</div>
+		<div role="main" class="ui-content">
+			<h3 class="ui-title">Visi</h3>
+			<p>Menjadi Sebuah Organisasi Statistik Yang Terbilang Di Dunia Menjelang 2020.</p>
+				<a href="#" class="ui-btn ui-corner-all ui-shadow" data-rel="back">Kembali</a>
+				<a href="#page2" class="ui-btn ui-corner-all ui-shadow" data-transition="flow">Maklumat</a>
+		</div>
+	</div><!--close pop up dialog -->	
+	
+	<a href="#pop2" class="ui-btn ui-btn-inline" data-rel="popup" data-transition="pop">Misi</a>
+	<div data-role="popup" id="pop2">
+	<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-icon-delete ui-btn-icon-notext ui-btn-right">X</a> <!--ini untuk delete button -->
+	<h3>Misi</h3>
+		<p>Penjana Statistik Negara yang berintegriti dan reliable untuk perancangan dan pembangunan nasional melalui :</p>
+		<ol>
+			<li>Penggunaan metodologi dan amalan terbaik;</li>
+			<li>Penyelidikan dan analisis statistik yang berterusan;</li>
+			<li>Penggunaan teknologi yang terbaik; dan</li>
+			<li>Modal insan yang kompeten dan berinovasi</li>
+		</ol>
+	</div>
+	
+	<!--<a href="#pop2" class="ui-btn ui-btn-inline" data-rel="popup" data-transition="pop">Misi</a>
+	<div data-role="popup" id="pop2">
+	<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-icon-delete ui-btn-icon-notext ui-btn-right">X</a> <!--ini untuk delete button -->
+	<!--<h3>Misi</h3>
+		<p>Penjana Statistik Negara yang berintegriti dan reliable untuk perancangan dan pembangunan nasional melalui :</p>
+		<ol>
+			<li>Penggunaan metodologi dan amalan terbaik;</li>
+			<li>Penyelidikan dan analisis statistik yang berterusan;</li>
+			<li>Penggunaan teknologi yang terbaik; dan</li>
+			<li>Modal insan yang kompeten dan berinovasi</li>
+		</ol>
+	</div>-->
+	
+	
+	<a href="#page2" class="ui-btn" data-transition="fade" data-direction="reverse">Maklumat</a>
+  </div>
+  
+  <!--footer -->
+  <div data-role="footer" data-position="fixed">
+	<div data-role="navbar">
+		<ul>
+			<li><a href="#page2" data-icon="grid">Maklumat</a></li>
+			<li><a href="#page" data-icon="star" class="ui-btn-active ui-state-persist">Fungsi</a></li>
+			<li><a href="#page4" data-icon="gear">Direktori</a></li>
+		</ul>
+	</div>
+  </div>
+
+</div>
+
+<!--Page 4-->
+<div data-role="page" id="page4">
+	<!--header -->
+  <div data-role="header" data-position="fixed" data-add-back-btn="true" data-add-back-text="Kembali">
+	<h3>Direktori</h3>	
+  </div>
+  
+  <!--content -->
+  <div role="main" class="ui-content"> <!-- 1.4 ke atas dah tukar di content-->
+	<div data-role="popup" id="d1"> <!-- pop up menggunakan icon-->
+		<a href="tel:+60388881111" class="ui-btn ui-icon-phone ui-btn-icon-notext ui-corner-all ui-btn-inline">Telefon</a>
+		<a href="sms://+60138881111" class="ui-btn ui-icon-action ui-btn-icon-notext ui-corner-all ui-btn-inline">SMS</a>
+		<a href="mailto:ramesh@try.com" class="ui-btn ui-icon-mail ui-btn-icon-notext ui-corner-all ui-btn-inline">Emel</a>
+	</div>
+	<div data-role="popup" id="d2">
+		<ul data-role="listview" data-inset="true"> <!-- pop up menggunakan list-->
+			<li><a href="tel:+60388883333">Telefon</a></li>
+			<li><a href="sms://+60138883333">SMS</a></li>
+			<li><a href="mailto:khoo_teik@try.com">Emel</a></li>
+		</ul>
+	</div>
+	<div data-role="popup" id="d4"> <!-- pop up menggunakan icon-->
+		<a href="tel:+60388884444" class="ui-btn ui-icon-phone ui-btn-icon-notext ui-corner-all ui-btn-inline">Telefon</a>
+		<a href="sms://+60138884444" class="ui-btn ui-icon-action ui-btn-icon-notext ui-corner-all ui-btn-inline">SMS</a>
+		<a href="mailto:shaari@try.com" class="ui-btn ui-icon-mail ui-btn-icon-notext ui-corner-all ui-btn-inline">Emel</a>
+	</div>
+	<div data-role="popup" id="d5"> <!-- pop up menggunakan icon-->
+		<a href="tel:+60388885555" class="ui-btn ui-icon-phone ui-btn-icon-notext ui-corner-all ui-btn-inline">Telefon</a>
+		<a href="sms://+60138885555" class="ui-btn ui-icon-action ui-btn-icon-notext ui-corner-all ui-btn-inline">SMS</a>
+		<a href="mailto:aziz@try.com" class="ui-btn ui-icon-mail ui-btn-icon-notext ui-corner-all ui-btn-inline">Emel</a>
+	</div>
+	<div data-role="popup" id="d6"> <!-- pop up menggunakan icon-->
+		<a href="tel:+60388886666" class="ui-btn ui-icon-phone ui-btn-icon-notext ui-corner-all ui-btn-inline">Telefon</a>
+		<a href="sms://+60138886666" class="ui-btn ui-icon-action ui-btn-icon-notext ui-corner-all ui-btn-inline">SMS</a>
+		<a href="mailto:normah@try.com" class="ui-btn ui-icon-mail ui-btn-icon-notext ui-corner-all ui-btn-inline">Emel</a>
+	</div>
+	<div data-role="popup" id="d7"> <!-- pop up menggunakan icon-->
+		<a href="tel:+60388887777" class="ui-btn ui-icon-phone ui-btn-icon-notext ui-corner-all ui-btn-inline">Telefon</a>
+		<a href="sms://+60138887777" class="ui-btn ui-icon-action ui-btn-icon-notext ui-corner-all ui-btn-inline">SMS</a>
+		<a href="mailto:wan_ramlah@try.com" class="ui-btn ui-icon-mail ui-btn-icon-notext ui-corner-all ui-btn-inline">Emel</a>
+	</div>
+	<div data-role="popup" id="d8"> <!-- pop up menggunakan icon-->
+		<a href="tel:+60388888888" class="ui-btn ui-icon-phone ui-btn-icon-notext ui-corner-all ui-btn-inline">Telefon</a>
+		<a href="sms://+60138888888" class="ui-btn ui-icon-action ui-btn-icon-notext ui-corner-all ui-btn-inline">SMS</a>
+		<a href="mailto:dr_rahman@try.com" class="ui-btn ui-icon-mail ui-btn-icon-notext ui-corner-all ui-btn-inline">Emel</a>
+	</div>
+	
+	<ul data-role="listview" data-filter="true" data-filter-placeholder="Taipkan Nama">
+		<li><a href="#d1" data-rel="popup" data-transition="slideup">
+		<img src="gambar/1.jpg" width="150"/>
+		<h3>Dato' Ramesh Chander</h3>
+		<p>(1 Jan 1966 – 31 Dis 1977)</p>
+		</a></li>
+		
+		<li><a href="#d2" data-rel="popup" data-transition="slideup">
+		<img src="gambar/2.jpg" width="150"/>
+		<h3>Dato’ Khoo Teik Huat </h3>
+		<p>(18 Mei 1978 – 14 Dis 1992)</p>
+		</a></li>
+		
+		<li>
+		<img src="gambar/3.jpg" width="150"/>
+		<h3>Khoo Soo Gim</h3>
+		<p>(15 Dis 1992 – 15 Sep 1995)</p>
+		<p>
+			<a href="tel:+60388883333" class="ui-btn ui-icon-phone ui-btn-icon-notext ui-corner-all ui-btn-inline">Telefon</a>
+			<a href="sms://+60138883333" class="ui-btn ui-icon-action ui-btn-icon-notext ui-corner-all ui-btn-inline">SMS</a>
+			<a href="mailto:khoo_soo@try.com" class="ui-btn ui-icon-mail ui-btn-icon-notext ui-corner-all ui-btn-inline">Emel</a>
+		</p>
+		</li>
+		
+		<li><a href="#d4" data-rel="popup" data-transition="slideup">
+		<img src="gambar/4.jpg" width="150"/>
+		<h3>Dato’ Shaari b. Abdul Rahman </h3>
+		<p>(16 Sep 1995 – 19 Sep 2004)</p>
+		</a></li>
+		
+		<li><a href="#d5" data-rel="popup" data-transition="slideup">
+		<img src="gambar/5.jpg" width="150"/>
+		<h3>Hj. Aziz b. Othman</h3>
+		<p>(20 Sep 2004 – 2 Dis 2005)</p>
+		</a></li>
+		
+		<li><a href="#d6" data-rel="popup" data-transition="slideup">
+		<img src="gambar/6.jpg" width="150"/>
+		<h3>Dato’ Hjh. Normah bt. Mohd Aris </h3>
+		<p>(3 Dis 2005 – 2 Okt 2007)</p>
+		</a></li>
+		
+		<li><a href="#d7" data-rel="popup" data-transition="slideup">
+		<img src="gambar/7.jpg" width="150"/>
+		<h3>Dato’ Hjh.Wan Ramlah Wan Abd.Raof</h3>
+		<p>(3 Okt 2007 – 11 Ogos 2011)</p>
+		</a></li>
+		
+		<li><a href="#d8" data-rel="popup" data-transition="slideup">
+		<img src="gambar/1.png" width="150"/>
+		<h3>Dr.Hj Abdul Rahman b. Hasan</h3>
+		<p>(2 September 2011 – )</p>
+		</a></li>
+	</ul>	
+	
+  
+  <!--footer -->
+  <div data-role="footer" data-position="fixed">
+	<div data-role="navbar">
+		<ul>
+			<li><a href="#page2" data-icon="grid">Maklumat</a></li>
+			<li><a href="#page3" data-icon="star">Fungsi</a></li>
+			<li><a href="#" data-icon="gear" class="ui-btn-active ui-state-persist">Direktori</a></li>
+		</ul>
+	</div>
+  </div>
+
+</div>
+
+</body>
+</html>
+
